@@ -7,11 +7,6 @@ ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="42b3", ENV{ID_MM_DEVICE_IGNORE}="1"
 
 LABEL="mm_usb_device_blacklist_end"
 
-
-# Solo bootloader + firmware access
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="42b3", TAG+="uaccess"
 SUBSYSTEM=="tty", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="42b3", TAG+="uaccess"
 
-
-# ST DFU access
-SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", TAG+="uaccess"
